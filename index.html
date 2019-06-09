@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ansatz zur Lösung von Frosch-Problemen</title>
+
+    <link rel="stylesheet" type="text/css" href="libs/treant/Treant.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+
+<body>
+    <header>
+        <h1>"Ansatz zur Lösung von Frosch-Problemen"</h1>
+        <h3>by ALDA-DHIF17</h3>
+    </header>
+
+    <article>
+        <canvas id="main-canvas" width="800" height="550"></canvas>
+        <form id="in-form">
+            <input type="text" id="pls_in" placeholder="Platforms ... (e.g.: 0 2 4 0)" />
+            <input type="number" id="ran_in" placeholder="Range ... (e.g.: 3)" />
+            <input type="submit" id="sub_in" value="Go!" />
+        </form>
+
+        <h3 id="tree-head" style="margin-top: 50px;display:none;">Algorithmically generated tree </h3>
+        <div id="tree-out"></div>
+    </article>
+
+    <script src="libs/treant/vendor/raphael.js"></script>
+    <script src="libs/treant/Treant.js"></script>
+
+    <script src="scripts/Platform.js"></script>
+    <script src="scripts/Frog.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
