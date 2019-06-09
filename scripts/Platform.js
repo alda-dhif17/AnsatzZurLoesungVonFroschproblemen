@@ -28,7 +28,9 @@ class Platform {
             if (this.children === null) {
                 this.children = [];
                 for (let i = this.indexInArray + 1; i < Math.min(this.indexInArray + 1 + this.rangeOfSight, this.platforms.length); i++) {
-                    this.children.push(new Platform(Math.abs(this.platforms[this.indexInArray] - this.platforms[i]), i, this.platforms, this.rangeOfSight, this.platform_tree, this.node));
+                    this.children.push(new Platform(Math.abs(Math.abs(this.platforms[this.indexInArray]) - Math.abs(this.platforms[i])), 
+                        i, this.platforms, this.rangeOfSight, this.platform_tree, this.node));
+                        
                     if (this.children[i - this.indexInArray - 1].isGoal()) {
                         let path = [];
                         path.push(this.children[i - this.indexInArray - 1]);
